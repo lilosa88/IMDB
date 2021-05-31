@@ -123,7 +123,7 @@
   
     - This model was created using tf.keras.models.Sequential, which defines a SEQUENCE of layers in the neural network. These sequence of layers used were the         following:
       - One Embedding layer
-      - One Conv1D layer: 
+      - One Conv1D layer: You specify the number of convolutions that you want to learn, their size, and their activation function. Now words will be grouped into          the size of the filter in this case 5. And convolutions will learned that can map the word classification to the desired output. As the size of the input          is 120 words, and a filter that is 5 words long will shave off 2 words from the front and back, leaving us with 116. The 128 filters that we specified              will show up here as part of the convolutional layer.
       - on GlobalAveragePooling1D
       - Two Dense layers: This adds a layer of neurons. Each layer of neurons has an activation function to tell them what to do. Therefore, the first Dense layer       consisted in 24 neurons with relu as an activation function. The second, have 1 neuron and sigmoid as activation function. 
 
@@ -185,15 +185,15 @@
           - Two Bidirectional layer: The parameter passed in is the number of outputs that I desire from that layer, in this case it's 64 for the first one and               32 for the second one. But when you feed an LSTM into another one, you do have to put the return_sequences equal true parameter into the first one. 
           - Two Dense layers: This adds a layer of neurons. Each layer of neurons has an activation function to tell them what to do. Therefore, the first Dense             layer consisted in 64 neurons with relu as an activation function. The second, have 1 neuron and sigmoid as activation function. 
 
-    - We built this model using adam optimizer and binary_crossentropy as loss function, as we're classifying to different classes.
+      - We built this model using adam optimizer and binary_crossentropy as loss function, as we're classifying to different classes.
 
-    - The number of epochs=10
+      - The number of epochs=10
 
-    - We obtained Accuracy 0.9784 for the train data and Accuracy 0.8617 for the validation data.
+      - We obtained Accuracy 0.9784 for the train data and Accuracy 0.8617 for the validation data.
   
-      <p align="center">
-        <img src="https://github.com/lilosa88/IMDB/blob/main/Images/Screenshot%20from%202021-05-31%2017-23-43.png" width="320" height="460">
-      </p> 
+        <p align="center">
+         <img src="https://github.com/lilosa88/IMDB/blob/main/Images/Screenshot%20from%202021-05-31%2017-23-43.png" width="320" height="460">
+        </p> 
   
   
 
