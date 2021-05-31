@@ -65,7 +65,7 @@
     - We obtained Accuracy 1.0 for the train data and Accuracy 0.8053 for the validation data.
   
       <p align="center">
-        <img src="https://github.com/lilosa88/Sarcasm-detection/blob/main/Images/Screenshot%20from%202021-05-31%2016-10-14.png" width="320" height="460">
+        <img src="https://github.com/lilosa88/IMDB/blob/main/Images/Screenshot%20from%202021-05-31%2017-23-21.png" width="320" height="460">
       </p>  
   
   - Second model:
