@@ -83,8 +83,119 @@
   
       <p align="center">
         <img src="https://github.com/lilosa88/IMDB/blob/main/Images/Screenshot%20from%202021-05-31%2017-23-43.png" width="320" height="460">
+      </p>
+  
+    - Third model:
+  
+    - This model was created using tf.keras.models.Sequential, which defines a SEQUENCE of layers in the neural network. These sequence of layers used were the         following:
+      - One Embedding layer
+      - One Bidirectional layer with LSTM(32) 
+      - Two Dense layers: This adds a layer of neurons. Each layer of neurons has an activation function to tell them what to do. Therefore, the first Dense layer       consisted in 24 neurons with relu as an activation function. The second, have 1 neuron and sigmoid as activation function. 
+
+    - We built this model using adam optimizer and binary_crossentropy as loss function, as we're classifying to different classes.
+
+    - The number of epochs=50
+
+    - We obtained Accuracy 1.0 for the train data and Accuracy 0.8053 for the validation data.
+  
+      <p align="center">
+        <img src="https://github.com/lilosa88/IMDB/blob/main/Images/Screenshot%20from%202021-05-31%2017-23-21.png" width="320" height="460">
+      </p>  
+  
+  - Fourth model:
+  
+    - This model was created using tf.keras.models.Sequential, which defines a SEQUENCE of layers in the neural network. These sequence of layers used were the         following:
+      - One Embedding layer
+      - One Bidirectional layer with LSTM(32) 
+      - Two Dense layers: This adds a layer of neurons. Each layer of neurons has an activation function to tell them what to do. Therefore, the first Dense layer       consisted in 24 neurons with relu as an activation function. The second, have 1 neuron and sigmoid as activation function. 
+
+    - We built this model using adam optimizer and binary_crossentropy as loss function, as we're classifying to different classes.
+
+    - The number of epochs=50
+
+    - We obtained Accuracy 1.0 for the train data and Accuracy 0.8053 for the validation data.
+  
+      <p align="center">
+        <img src="https://github.com/lilosa88/IMDB/blob/main/Images/Screenshot%20from%202021-05-31%2017-23-21.png" width="320" height="460">
+      </p>  
+  
+  - Fifth model:
+  
+    - This model was created using tf.keras.models.Sequential, which defines a SEQUENCE of layers in the neural network. These sequence of layers used were the         following:
+      - One Embedding layer
+      - One Conv1D layer: 
+      - on GlobalAveragePooling1D
+      - Two Dense layers: This adds a layer of neurons. Each layer of neurons has an activation function to tell them what to do. Therefore, the first Dense layer       consisted in 24 neurons with relu as an activation function. The second, have 1 neuron and sigmoid as activation function. 
+
+    - We built this model using adam optimizer and binary_crossentropy as loss function, as we're classifying to different classes.
+
+    - The number of epochs=50
+
+    - We obtained Accuracy 1.0 for the train data and Accuracy 0.8052 for the validation data.
+  
+      <p align="center">
+        <img src="https://github.com/lilosa88/IMDB/blob/main/Images/Screenshot%20from%202021-05-31%2017-23-43.png" width="320" height="460">
+      </p>  
+  
+  
+    - Sixth model:
+      
+      - In the previous models we use TFDS to load the reviews from the IMDb dataset and perform classification on them. However, often with prepackaged datasets         like these, some data scientists have done the work. For this model we use the version of the IMDb dataset that has been pre-tokenized. This tokenization         is done on sub words.
+  
+      - This model was created using tf.keras.models.Sequential, which defines a SEQUENCE of layers in the neural network. These sequence of layers used were the         following:
+          - One Embedding layer 
+          - One  Global Average Pooling 1D layer
+          - Two Dense layers: This adds a layer of neurons. Each layer of neurons has an activation function to tell them what to do. Therefore, the first Dense             layer consisted in 6 neurons with relu as an activation function. The second, have 1 neuron and sigmoid as activation function. 
+
+    - We built this model using adam optimizer and binary_crossentropy as loss function, as we're classifying to different classes.
+
+    - The number of epochs=10
+
+    - We obtained Accuracy 0.9445 for the train data and Accuracy 0.8780 for the validation data.
+  
+      <p align="center">
+        <img src="https://github.com/lilosa88/IMDB/blob/main/Images/Screenshot%20from%202021-05-31%2017-23-43.png" width="320" height="460">
       </p>  
 
+    - Seventh model:
+      
+      - In the previous models we use TFDS to load the reviews from the IMDb dataset and perform classification on them. However, often with prepackaged datasets         like these, some data scientists have done the work. For this model we use the version of the IMDb dataset that has been pre-tokenized. This tokenization         is done on sub words.
+  
+      - This model was created using tf.keras.models.Sequential, which defines a SEQUENCE of layers in the neural network. These sequence of layers used were the         following:
+          - One Embedding layer 
+          - One Bidirectional layer: The parameter passed in is the number of outputs that I desire from that layer, in this case it's 64. With                               tf.keras.layers.Bidirectional, it will make my cell state go in both directions.
+          - Two Dense layers: This adds a layer of neurons. Each layer of neurons has an activation function to tell them what to do. Therefore, the first Dense             layer consisted in 64 neurons with relu as an activation function. The second, have 1 neuron and sigmoid as activation function. 
+
+    - We built this model using adam optimizer and binary_crossentropy as loss function, as we're classifying to different classes.
+
+    - The number of epochs=10
+
+    - We obtained Accuracy 0.8842 for the train data and Accuracy 0.8057 for the validation data.
+  
+      <p align="center">
+        <img src="https://github.com/lilosa88/IMDB/blob/main/Images/Screenshot%20from%202021-05-31%2017-23-43.png" width="320" height="460">
+      </p>  
+  
+   - Eigth model:
+      
+      - In the previous models we use TFDS to load the reviews from the IMDb dataset and perform classification on them. However, often with prepackaged datasets         like these, some data scientists have done the work. For this model we use the version of the IMDb dataset that has been pre-tokenized. This tokenization         is done on sub words.
+  
+      - This model was created using tf.keras.models.Sequential, which defines a SEQUENCE of layers in the neural network. These sequence of layers used were the         following:
+          - One Embedding layer 
+          - Two Bidirectional layer: The parameter passed in is the number of outputs that I desire from that layer, in this case it's 64 for the first one and               32 for the second one. But when you feed an LSTM into another one, you do have to put the return_sequences equal true parameter into the first one. 
+          - Two Dense layers: This adds a layer of neurons. Each layer of neurons has an activation function to tell them what to do. Therefore, the first Dense             layer consisted in 64 neurons with relu as an activation function. The second, have 1 neuron and sigmoid as activation function. 
+
+    - We built this model using adam optimizer and binary_crossentropy as loss function, as we're classifying to different classes.
+
+    - The number of epochs=10
+
+    - We obtained Accuracy 0.9784 for the train data and Accuracy 0.8617 for the validation data.
+  
+      <p align="center">
+        <img src="https://github.com/lilosa88/IMDB/blob/main/Images/Screenshot%20from%202021-05-31%2017-23-43.png" width="320" height="460">
+      </p> 
+  
+  
 
 
 
