@@ -80,7 +80,7 @@
     - We obtained Accuracy 0.9509 for the train data and Accuracy 0.8316 for the validation data.
   
       <p align="center">
-        <img src="https://github.com/lilosa88/IMDB/blob/main/Images/Screenshot%20from%202021-05-31%2017-23-43.png" width="320" height="460">
+        <img src="https://github.com/lilosa88/IMDB/blob/main/Images/Screenshot%20from%202021-06-01%2007-01-15.png" width="320" height="460">
       </p>
   
     - Third model:
