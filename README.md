@@ -46,8 +46,6 @@
   
   - Fifth, we manipulate these lists to make every sentence the same length, otherwise, it may be hard to train a neural network with them. To do so, we apply      the method pad_sequences that use padding. First, in order to use the padding functions you'll have to import pad sequences from                                  tensorflow.carastoppreprocessing.sequence. Then once the tokenizer has created the sequences, these sequences can be passed to pad sequences in order to have    them padded. The list of sentences then is padded out into a matrix where each row in the matrix has the same length. This is achieved by putting the            appropriate number of zeros before the sentence. If we prefer the zeros being on the right side then we set the parameter padding equals post. Normally, the      matrix width has the same size as the longest sentence. However, this can be override that with the maxlen parameter. If I have sentences longer than the        maxlength, then I'll lose information. If padding is pre (what it is by default), I will lose information from the beginning of the sentence. In order to        override this so that we will lose it from the end instead, we can do so with the truncating parameter.
   
-
- 
  
 # Neural Network models
   
@@ -62,7 +60,7 @@
 
     - The number of epochs=10
 
-    - We obtained Accuracy 1.0 for the train data and Accuracy 0.8053 for the validation data.
+    - We obtained Accuracy 1.0 for the train data and Accuracy 0.8254 for the validation data.
   
       <p align="center">
         <img src="https://github.com/lilosa88/IMDB/blob/main/Images/Screenshot%20from%202021-05-31%2017-23-21.png" width="320" height="460">
@@ -79,7 +77,7 @@
 
     - The number of epochs=10
 
-    - We obtained Accuracy 1.0 for the train data and Accuracy 0.8052 for the validation data.
+    - We obtained Accuracy 0.9509 for the train data and Accuracy 0.8316 for the validation data.
   
       <p align="center">
         <img src="https://github.com/lilosa88/IMDB/blob/main/Images/Screenshot%20from%202021-05-31%2017-23-43.png" width="320" height="460">
@@ -89,14 +87,14 @@
   
     - This model was created using tf.keras.models.Sequential, which defines a SEQUENCE of layers in the neural network. These sequence of layers used were the         following:
       - One Embedding layer
-      - One Bidirectional layer with LSTM(32) 
-      - Two Dense layers: This adds a layer of neurons. Each layer of neurons has an activation function to tell them what to do. Therefore, the first Dense layer       consisted in 24 neurons with relu as an activation function. The second, have 1 neuron and sigmoid as activation function. 
+      - One Bidirectional layer with GRU(32) 
+      - Two Dense layers: This adds a layer of neurons. Each layer of neurons has an activation function to tell them what to do. Therefore, the first Dense layer       consisted in 6 neurons with relu as an activation function. The second, have 1 neuron and sigmoid as activation function. 
 
     - We built this model using adam optimizer and binary_crossentropy as loss function, as we're classifying to different classes.
 
     - The number of epochs=50
 
-    - We obtained Accuracy 1.0 for the train data and Accuracy 0.8053 for the validation data.
+    - We obtained Accuracy 0.9832 for the train data and Accuracy 0.8195 for the validation data.
   
       <p align="center">
         <img src="https://github.com/lilosa88/IMDB/blob/main/Images/Screenshot%20from%202021-05-31%2017-23-21.png" width="320" height="460">
@@ -107,13 +105,13 @@
     - This model was created using tf.keras.models.Sequential, which defines a SEQUENCE of layers in the neural network. These sequence of layers used were the         following:
       - One Embedding layer
       - One Bidirectional layer with LSTM(32) 
-      - Two Dense layers: This adds a layer of neurons. Each layer of neurons has an activation function to tell them what to do. Therefore, the first Dense layer       consisted in 24 neurons with relu as an activation function. The second, have 1 neuron and sigmoid as activation function. 
+      - Two Dense layers: This adds a layer of neurons. Each layer of neurons has an activation function to tell them what to do. Therefore, the first Dense layer       consisted in 6 neurons with relu as an activation function. The second, have 1 neuron and sigmoid as activation function. 
 
     - We built this model using adam optimizer and binary_crossentropy as loss function, as we're classifying to different classes.
 
     - The number of epochs=50
 
-    - We obtained Accuracy 1.0 for the train data and Accuracy 0.8053 for the validation data.
+    - We obtained Accuracy 1.0 for the train data and Accuracy 0.8135 for the validation data.
   
       <p align="center">
         <img src="https://github.com/lilosa88/IMDB/blob/main/Images/Screenshot%20from%202021-05-31%2017-23-21.png" width="320" height="460">
@@ -123,15 +121,15 @@
   
     - This model was created using tf.keras.models.Sequential, which defines a SEQUENCE of layers in the neural network. These sequence of layers used were the         following:
       - One Embedding layer
-      - One Conv1D layer: You specify the number of convolutions that you want to learn, their size, and their activation function. Now words will be grouped into          the size of the filter in this case 5. And convolutions will learned that can map the word classification to the desired output. As the size of the input          is 120 words, and a filter that is 5 words long will shave off 2 words from the front and back, leaving us with 116. The 128 filters that we specified              will show up here as part of the convolutional layer.
+      - One Conv1D layer: You specify the number of convolutions that you want to learn, their size, and their activation function. Now words will be grouped             into the size of the filter in this case 5. And convolutions will learned that can map the word classification to the desired output. As the size of the         input is 120 words, and a filter that is 5 words long will shave off 2 words from the front and back, leaving us with 116. The 128 filters that we               specified will show up here as part of the convolutional layer.
       - on GlobalAveragePooling1D
-      - Two Dense layers: This adds a layer of neurons. Each layer of neurons has an activation function to tell them what to do. Therefore, the first Dense layer       consisted in 24 neurons with relu as an activation function. The second, have 1 neuron and sigmoid as activation function. 
+      - Two Dense layers: This adds a layer of neurons. Each layer of neurons has an activation function to tell them what to do. Therefore, the first Dense             layer consisted in 6 neurons with relu as an activation function. The second, have 1 neuron and sigmoid as activation function. 
 
     - We built this model using adam optimizer and binary_crossentropy as loss function, as we're classifying to different classes.
 
     - The number of epochs=50
 
-    - We obtained Accuracy 1.0 for the train data and Accuracy 0.8052 for the validation data.
+    - We obtained Accuracy 1.0 for the train data and Accuracy 0.7966 for the validation data.
   
       <p align="center">
         <img src="https://github.com/lilosa88/IMDB/blob/main/Images/Screenshot%20from%202021-05-31%2017-23-43.png" width="320" height="460">
@@ -151,7 +149,7 @@
 
     - The number of epochs=10
 
-    - We obtained Accuracy 0.9445 for the train data and Accuracy 0.8780 for the validation data.
+    - We obtained Accuracy 0.9411 for the train data and Accuracy 0.8681 for the validation data.
   
       <p align="center">
         <img src="https://github.com/lilosa88/IMDB/blob/main/Images/Screenshot%20from%202021-05-31%2017-23-43.png" width="320" height="460">
@@ -163,14 +161,14 @@
   
       - This model was created using tf.keras.models.Sequential, which defines a SEQUENCE of layers in the neural network. These sequence of layers used were the         following:
           - One Embedding layer 
-          - One Bidirectional layer: The parameter passed in is the number of outputs that I desire from that layer, in this case it's 64. With                               tf.keras.layers.Bidirectional, it will make my cell state go in both directions.
+          - One Bidirectional layer: The parameter passed in is the number of outputs that I desire from that layer, in this case it's 64. With                               tf.keras.layers.Bidirectional, it will make my cell state go in both directions. LSTM
           - Two Dense layers: This adds a layer of neurons. Each layer of neurons has an activation function to tell them what to do. Therefore, the first Dense             layer consisted in 64 neurons with relu as an activation function. The second, have 1 neuron and sigmoid as activation function. 
 
     - We built this model using adam optimizer and binary_crossentropy as loss function, as we're classifying to different classes.
 
     - The number of epochs=10
 
-    - We obtained Accuracy 0.8842 for the train data and Accuracy 0.8057 for the validation data.
+    - We obtained Accuracy 0.8928 for the train data and Accuracy 0.7867 for the validation data.
   
       <p align="center">
         <img src="https://github.com/lilosa88/IMDB/blob/main/Images/Screenshot%20from%202021-05-31%2017-23-43.png" width="320" height="460">
@@ -182,14 +180,14 @@
   
       - This model was created using tf.keras.models.Sequential, which defines a SEQUENCE of layers in the neural network. These sequence of layers used were the         following:
           - One Embedding layer 
-          - Two Bidirectional layer: The parameter passed in is the number of outputs that I desire from that layer, in this case it's 64 for the first one and               32 for the second one. But when you feed an LSTM into another one, you do have to put the return_sequences equal true parameter into the first one. 
+          - Two Bidirectional layer: The parameter passed in is the number of outputs that I desire from that layer, in this case it's LSTM(64) for the first one             and LSTM(32) for the second one. But when you feed an LSTM into another one, you do have to put the return_sequences equal true parameter into the               first one. 
           - Two Dense layers: This adds a layer of neurons. Each layer of neurons has an activation function to tell them what to do. Therefore, the first Dense             layer consisted in 64 neurons with relu as an activation function. The second, have 1 neuron and sigmoid as activation function. 
 
       - We built this model using adam optimizer and binary_crossentropy as loss function, as we're classifying to different classes.
 
       - The number of epochs=10
 
-      - We obtained Accuracy 0.9784 for the train data and Accuracy 0.8617 for the validation data.
+      - We obtained Accuracy 0.9774 for the train data and Accuracy 0.8595 for the validation data.
   
         <p align="center">
          <img src="https://github.com/lilosa88/IMDB/blob/main/Images/Screenshot%20from%202021-05-31%2017-23-43.png" width="320" height="460">
