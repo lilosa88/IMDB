@@ -105,7 +105,7 @@
     - This model was created using tf.keras.models.Sequential, which defines a SEQUENCE of layers in the neural network. These sequence of layers used were the         following:
       - One Embedding layer
       - One Bidirectional layer with LSTM(32) 
-      - Two Dense layers: This adds a layer of neurons. Each layer of neurons has an activation function to tell them what to do. Therefore, the first Dense layer       consisted in 6 neurons with relu as an activation function. The second, have 1 neuron and sigmoid as activation function. 
+      - Two Dense layers: This adds a layer of neurons. Each layer of neurons has an activation function to tell them what to do. Therefore, the first Dense            layer consisted in 6 neurons with relu as an activation function. The second, have 1 neuron and sigmoid as activation function. 
 
     - We built this model using adam optimizer and binary_crossentropy as loss function, as we're classifying to different classes.
 
@@ -114,7 +114,7 @@
     - We obtained Accuracy 1.0 for the train data and Accuracy 0.8135 for the validation data.
   
       <p align="center">
-        <img src="https://github.com/lilosa88/IMDB/blob/main/Images/Screenshot%20from%202021-05-31%2017-23-21.png" width="320" height="460">
+        <img src="https://github.com/lilosa88/IMDB/blob/main/Images/Screenshot%20from%202021-06-01%2007-01-58.png" width="320" height="460">
       </p>  
   
   - Fifth model:
