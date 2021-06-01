@@ -190,7 +190,7 @@
       - We obtained Accuracy 0.9774 for the train data and Accuracy 0.8595 for the validation data.
   
         <p align="center">
-         <img src="https://github.com/lilosa88/IMDB/blob/main/Images/Screenshot%20from%202021-05-31%2017-23-43.png" width="320" height="460">
+         <img src="https://github.com/lilosa88/IMDB/blob/main/Images/Screenshot%20from%202021-06-01%2007-03-18.png" width="320" height="460">
         </p> 
   
   
